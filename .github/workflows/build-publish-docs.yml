@@ -27,4 +27,9 @@ jobs:
       - name: Build diagram
         run: |
           python test.py
+      - name: Get diagram files
+        uses: actions/upload-artifact@v2
+        with:
+          name: diagrams
+          path: *.png
 
