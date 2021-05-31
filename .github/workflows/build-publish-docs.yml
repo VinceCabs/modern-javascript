@@ -27,9 +27,8 @@ jobs:
       - name: Build diagram
         run: |
           python test.py
-      - name: Get diagram files
+      - name: Store diagram files
         uses: actions/upload-artifact@v2
         with:
           name: diagrams
-          path: *.png
-
+          path: grouped_workers.png
