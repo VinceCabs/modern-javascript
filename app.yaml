@@ -1,0 +1,20 @@
+runtime: python27
+api_version: 1
+threadsafe: yes
+
+handlers:
+- url: /test/(.+)/
+  static_files: _build/html/\1/index.html
+  upload: _build/html/(.+)/index.html
+
+- url: /test/
+  static_files: _build/html/index.html
+  upload: _build/html/index.html
+
+- url: /test/([^\.]+)([^/])
+  static_files: _build/html/\1\2/index.html
+  upload: _build/html/(.+)
+
+- url: /test/(.+)
+  static_files: _build/html/\1
+  upload: _build/html/(.+)
